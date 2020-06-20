@@ -50,6 +50,25 @@ BOOST_AUTO_TEST_CASE(post) try {
         ("content", "post 3: reply") //
     );
 
+
+    // tests to verify like functionality
+    t.push_action(
+        N(talk), N(like), N(john),
+        mutable_variant_object       //
+        ("id", 2)                    //
+        ("user", "john")             //
+    );
+
+    t.push_action(
+        N(talk), N(like), N(jane),
+        mutable_variant_object       //
+        ("id", 2)                    //
+        ("user", "jane")             //
+    );
+
+
+
+
     // Can't reply to non-existing message
     BOOST_CHECK_THROW(
         [&] {
