@@ -68,6 +68,25 @@ cleos get table talk '' message
 
 ```
 
+## Liking the messages
+
+Run this in a terminal:
+```
+cleos push action talk like '[1000, bob]' -p bob
+cleos push action talk like '[2000, jane]' -p jane
+cleos push action talk like '[2000, jane]' -p jane
+
+```
+
+## Listing the messages with the likes count updated
+
+Run this in a terminal:
+```
+cleos get table talk '' message
+
+```
+
+
 ## Viewing the front-end decentralized web app (EOSJS):
 
 The source code for the React WebApp is at `webapp/src/index.tsx` within the IDE. To preview the WebApp run this in a terminal:
